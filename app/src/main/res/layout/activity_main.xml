@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="false"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:focusable="false"
+        android:onClick="doLogout"
+        android:text="@string/logout"
+        android:textSize="@dimen/text_view_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_update_button" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:text="Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/inventory_button"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:focusable="false"
+        android:onClick="onClickInventory"
+        android:text="@string/inventory"
+        android:textSize="@dimen/text_view_font_size"
+        app:layout_constraintBottom_toTopOf="@+id/location_move_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <Button
+        android:id="@+id/location_move_button"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:focusable="false"
+        android:onClick="onClickLocationMove"
+        android:text="@string/location_move"
+        android:textSize="@dimen/text_view_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_button" />
+
+    <Button
+        android:id="@+id/data_update_button"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:focusable="false"
+        android:onClick="onClickDataUpdate"
+        android:text="@string/data_update"
+        android:textSize="@dimen/text_view_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScanQuery" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/location_move_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_button"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnScanQuery"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="scanQuery"
+        android:text="未上傳筆數查詢"
+        android:textSize="@dimen/text_view_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_move_button" />
+
+    <Button
+        android:id="@+id/btnClearData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="confirmClearData"
+        android:text="清除資料-暫用"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
+
+    <Button
+        android:id="@+id/testBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="doTest"
+        android:text="MyTest"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout"
+        tools:layout_editor_absoluteX="142dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
