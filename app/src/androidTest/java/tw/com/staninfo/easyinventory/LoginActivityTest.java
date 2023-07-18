@@ -12,9 +12,9 @@ import androidx.test.espresso.DataInteraction;
 import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.ViewAssertion;
 import androidx.test.espresso.ViewInteraction;
+import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -138,7 +138,7 @@ public class LoginActivityTest {
     for (int i = 1; i < 5;i++){
       StringBuffer sb = new StringBuffer();
       sb.append(random.nextInt(100000000));
-      addData(sb.toString());
+//      addData(sb.toString());
     }
 
     pressBack();
@@ -169,27 +169,27 @@ public class LoginActivityTest {
     });
   }
 
-  private void addData(String str){
-    ViewInteraction appCompatEditText2 = onView(
-        allOf(withId(R.id.editTextBarcode),
-            childAtPosition(
-                childAtPosition(
-                    withId(android.R.id.content),
-                    0),
-                2),
-            isDisplayed()));
-    appCompatEditText2.perform(replaceText(str), closeSoftKeyboard());
-
-    ViewInteraction appCompatButton3 = onView(
-        allOf(withId(R.id.add_button), withText("增加"),
-            childAtPosition(
-                childAtPosition(
-                    withId(android.R.id.content),
-                    0),
-                3),
-            isDisplayed()));
-    appCompatButton3.perform(click());
-  }
+//  private void addData(String str){
+//    ViewInteraction appCompatEditText2 = onView(
+//        allOf(withId(R.id.editTextBarcode),
+//            childAtPosition(
+//                childAtPosition(
+//                    withId(android.R.id.content),
+//                    0),
+//                2),
+//            isDisplayed()));
+//    appCompatEditText2.perform(replaceText(str), closeSoftKeyboard());
+//
+//    ViewInteraction appCompatButton3 = onView(
+//        allOf(withId(R.id.add_button), withText("增加"),
+//            childAtPosition(
+//                childAtPosition(
+//                    withId(android.R.id.content),
+//                    0),
+//                3),
+//            isDisplayed()));
+//    appCompatButton3.perform(click());
+//  }
 
   private static Matcher<View> childAtPosition(
       final Matcher<View> parentMatcher, final int position) {

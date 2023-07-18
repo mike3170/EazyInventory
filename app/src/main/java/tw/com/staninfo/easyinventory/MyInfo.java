@@ -2,7 +2,7 @@ package tw.com.staninfo.easyinventory;
 
 public class MyInfo {
   // office
-  //public final static String API_URL = "http://192.168.0.124:8080/api/zebra/";
+//  public final static String API_URL = "http://192.168.1.112:8080/api/zebra/";
 
   // home
   //public final static String API_URL = "http://192.168.0.197:8080/api/zebra/";
